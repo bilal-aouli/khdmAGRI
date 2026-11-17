@@ -1,0 +1,209 @@
+/* ==========================================================
+   KHADMA AGRI — style.css (ملف مشترك لكل الصفحات)
+   ========================================================== */
+
+/* ---------- 1. Tokens ---------- */
+:root {
+  --green-900: #1f3d2b;
+  --green-700: #2b5a3c;
+  --green-600: #3f8f4f;
+  --green-500: #4da35d;
+  --beige: #f5f0e6;
+  --white: #ffffff;
+  --gray-900: #1e2421;
+  --gray-600: #5b625d;
+  --line: #e2dccd;
+  --amber: #c98a1b;
+  --amber-bg: #fbf1dc;
+  --red: #b3392f;
+  --ok-bg: #e4f2e7;
+
+  --font: "Cairo", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(31, 61, 43, .06), 0 4px 14px rgba(31, 61, 43, .05);
+  --space: 1rem;
+  --container: 1120px;
+}
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font); color: var(--gray-900); background: var(--white); line-height: 1.8; }
+h1, h2, h3 { line-height: 1.3; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+.container { width: min(100% - 2rem, var(--container)); margin-inline: auto; }
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+/* ---------- 3. Buttons & badges ---------- */
+.btn { display: inline-block; padding: .7rem 1.4rem; border-radius: var(--radius); font-weight: 700; text-decoration: none; border: 1.5px solid transparent; transition: background .2s, border-color .2s; }
+.btn-sm { padding: .4rem 1rem; font-size: .95rem; }
+.btn-primary { background: var(--green-600); color: var(--white); }
+.btn-primary:hover { background: var(--green-700); }
+.btn-outline-light { border-color: rgba(255, 255, 255, .55); color: var(--white); }
+.btn-outline-light:hover { background: rgba(255, 255, 255, .1); }
+
+.badge { display: inline-block; padding: .1rem .7rem; border-radius: 99px; font-size: .85rem; font-weight: 600; white-space: nowrap; }
+.badge-ok { background: var(--ok-bg); color: var(--green-700); }
+.badge-warn { background: var(--amber-bg); color: var(--amber); }
+.badge-bad { background: #f8e3e0; color: var(--red); }
+.badge-demo { background: var(--beige); color: var(--gray-600); border: 1px dashed var(--line); }
+
+/* Star Border (مستوحى من React Bits) — حركة الحدود بـ CSS فقط */
+.star-border { position: relative; display: inline-block; padding: 1.5px; border-radius: var(--radius); overflow: hidden; text-decoration: none; background: rgba(255, 255, 255, .15); }
+.star-border::before, .star-border::after {
+  content: ""; position: absolute; width: 300%; height: 60%; opacity: .9; z-index: 0; border-radius: 50%;
+  background: radial-gradient(circle, #cfe9c3, transparent 12%);
+  animation: star-move 6s linear infinite alternate;
+}
+.star-border::before { bottom: -12px; right: -250%; }
+.star-border::after { top: -12px; left: -250%; animation-direction: alternate-reverse; }
+.star-border__inner { position: relative; z-index: 1; display: block; padding: .7rem 1.6rem; border-radius: calc(var(--radius) - 1px); background: var(--green-600); color: var(--white); font-weight: 700; transition: background .2s; }
+.star-border:hover .star-border__inner { background: var(--green-700); }
+@keyframes star-move { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+
+/* ---------- 4. Header / Footer ---------- */
+.site-header { position: sticky; top: 0; z-index: 20; background: var(--green-900); color: var(--white); border-bottom: 1px solid rgba(255, 255, 255, .1); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .7rem; flex-wrap: wrap; }
+.brand { font-weight: 800; text-decoration: none; letter-spacing: .02em; }
+.brand span { font-weight: 400; opacity: .8; margin-inline-start: .4rem; font-size: .9rem; }
+.main-nav { display: none; gap: 1.2rem; font-size: .95rem; }
+.main-nav a { text-decoration: none; opacity: .85; }
+.main-nav a:hover { opacity: 1; }
+
+.site-footer { background: var(--green-900); color: rgba(255, 255, 255, .85); padding-block: 2rem; }
+.footer-inner { display: grid; gap: 1.2rem; }
+.footer-inner strong { color: var(--white); }
+.footer-inner p { font-size: .9rem; opacity: .8; }
+.footer-inner nav { display: flex; flex-wrap: wrap; gap: 1rem; font-size: .95rem; }
+
+/* ---------- 5. Hero ---------- */
+.hero { position: relative; overflow: hidden; background: linear-gradient(180deg, var(--green-900), #17301f); color: var(--white); padding-block: 4.5rem 5rem; }
+.hero-inner { position: relative; z-index: 1; max-width: 46rem; }
+.hero-title { font-size: clamp(2rem, 6vw, 3.6rem); font-weight: 800; }
+.bt-word { display: inline-block; will-change: filter, opacity, transform; }
+.hero-lead { margin-top: 1.2rem; font-size: 1.1rem; max-width: 38rem; color: rgba(255, 255, 255, .85); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2rem; }
+
+/* Light Rays: أشعة خفيفة بألوان الهوية */
+.rays { position: absolute; inset: 0; pointer-events: none; }
+.ray {
+  position: absolute; top: -20%; width: 18vw; min-width: 90px; height: 140%;
+  transform-origin: top center; opacity: .16; filter: blur(14px);
+  background: linear-gradient(180deg, #cfe9c3, rgba(207, 233, 195, 0) 85%);
+}
+.r1 { left: 8%;  transform: rotate(14deg); }
+.r2 { left: 28%; transform: rotate(6deg);  opacity: .12; }
+.r3 { left: 48%; transform: rotate(-4deg); }
+.r4 { left: 68%; transform: rotate(-12deg); opacity: .12; }
+.r5 { left: 86%; transform: rotate(-20deg); }
+
+/* ---------- 6. Sections ---------- */
+.section { padding-block: 3.5rem; }
+.section-alt { background: var(--beige); }
+.section-title { font-size: clamp(1.5rem, 3.5vw, 2rem); color: var(--green-900); margin-bottom: 1.5rem; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.text { color: var(--gray-600); margin-bottom: 1.4rem; max-width: 34rem; }
+
+.steps { display: grid; gap: 1rem; counter-reset: step; }
+.steps li { counter-increment: step; position: relative; padding: 1rem 3.2rem 1rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); }
+.steps li::before { content: counter(step); position: absolute; right: 1rem; top: 1rem; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--green-900); color: var(--white); display: grid; place-items: center; font-size: .9rem; font-weight: 700; }
+.steps h3, .features h3 { font-size: 1.05rem; color: var(--green-900); }
+.steps p, .features p { color: var(--gray-600); font-size: .95rem; }
+
+.job-list { display: grid; gap: .9rem; }
+.job { display: grid; gap: .8rem; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.1rem; }
+.job h3 a { text-decoration: none; color: var(--green-900); }
+.job h3 a:hover { text-decoration: underline; }
+.job-meta { color: var(--gray-600); font-size: .92rem; }
+.job-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem 1rem; margin: 0; }
+.job-facts dt { font-size: .8rem; color: var(--gray-600); }
+.job-facts dd { margin: 0; font-weight: 600; }
+.job .badge { justify-self: start; }
+.link-more { display: inline-block; margin-top: 1.2rem; font-weight: 700; color: var(--green-700); }
+
+.split { display: grid; gap: 2rem; align-items: center; }
+.panel { background: var(--beige); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem; }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+.kpis strong { display: block; font-size: 2rem; color: var(--green-900); line-height: 1.2; font-variant-numeric: tabular-nums; }
+.kpis span { font-size: .85rem; color: var(--gray-600); }
+
+.features { display: grid; gap: 1.2rem; }
+.features li { padding-inline-start: 1rem; border-inline-start: 3px solid var(--green-600); }
+
+/* ---------- 7. JS enhancement (يخفي العناصر فقط عند توفر الحركة) ---------- */
+.js .hero-title .bt-word { opacity: 0; }
+
+/* ---------- 8. Responsive ---------- */
+@media (min-width: 640px) {
+  .steps, .features { grid-template-columns: repeat(2, 1fr); }
+  .job { grid-template-columns: 1.2fr 2fr auto; align-items: center; }
+  .job-facts { grid-template-columns: repeat(4, 1fr); }
+  .footer-inner { grid-template-columns: 1.5fr 1fr; align-items: start; }
+}
+@media (min-width: 960px) {
+  .main-nav { display: flex; }
+  .steps, .features { grid-template-columns: repeat(4, 1fr); }
+  .split { grid-template-columns: 1fr 1fr; }
+  .hero { padding-block: 6.5rem 7rem; }
+}
+
+/* ---------- 9. Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .star-border::before, .star-border::after { animation: none; }
+  .js .hero-title .bt-word { opacity: 1; }
+}
+
+/* ==========================================================
+   10. صفحات داخلية (jobs / job-details)
+   ========================================================== */
+.page-head { background: var(--beige); border-bottom: 1px solid var(--line); padding-block: 2rem; }
+.page-head h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); color: var(--green-900); }
+.page-head p { color: var(--gray-600); margin-top: .3rem; }
+.crumbs { font-size: .9rem; color: var(--gray-600); margin-bottom: .6rem; }
+.crumbs a { color: var(--green-700); }
+.note { font-size: .85rem; color: var(--gray-600); }
+.btn-block { display: block; text-align: center; width: 100%; }
+
+/* نماذج (مشتركة مع صفحات التسجيل لاحقاً) */
+.field { display: grid; gap: .3rem; }
+.field label { font-weight: 600; font-size: .95rem; }
+.field input, .field select { font: inherit; padding: .6rem .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); color: var(--gray-900); }
+.field input:focus, .field select:focus { outline: 3px solid var(--amber); outline-offset: 1px; border-color: var(--green-600); }
+button.btn { font: inherit; font-weight: 700; cursor: pointer; }
+
+/* jobs */
+.jobs-layout { display: grid; gap: 1.5rem; align-items: start; }
+.filters { display: grid; gap: .9rem; padding: 1.1rem; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.list-head { margin-bottom: 1rem; }
+.list-title { font-size: 1.2rem; color: var(--green-900); }
+
+/* job-details */
+.details-layout { display: grid; gap: 1.5rem; align-items: start; }
+.details { display: grid; gap: 1rem; }
+.block { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem; }
+.block h2 { font-size: 1.1rem; color: var(--green-900); margin-bottom: .8rem; }
+.info { display: grid; gap: .7rem 1.5rem; margin: 0; }
+.info dt { font-size: .82rem; color: var(--gray-600); }
+.info dd { margin: 0; font-weight: 600; }
+.bullets { display: grid; gap: .4rem; }
+.bullets li { position: relative; padding-inline-start: 1.1rem; }
+.bullets li::before { content: ""; position: absolute; inset-inline-start: 0; top: .8em; width: .4rem; height: .4rem; border-radius: 50%; background: var(--green-600); }
+.apply-card { display: grid; gap: 1rem; padding: 1.1rem; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+
+@media (min-width: 640px) {
+  .info { grid-template-columns: repeat(2, 1fr); }
+  .apply-card .info { grid-template-columns: 1fr; }
+}
+@media (min-width: 960px) {
+  .jobs-layout { grid-template-columns: 280px 1fr; }
+  .filters { position: sticky; top: 5rem; }
+  .details-layout { grid-template-columns: 1fr 300px; }
+  .apply-card { position: sticky; top: 5rem; }
+}

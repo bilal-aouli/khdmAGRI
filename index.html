@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KHADMA AGRI – خدمة فلاحية</title>
+  <meta name="description" content="منصة لتنظيم العمل الفلاحي الموسمي: عروض العمل، الترشح، الورديات والنقل.">
+  <!-- يضيف class="js" قبل الرسم حتى لا تختفي النصوص إذا تعطل JavaScript -->
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html{scroll-behavior: smooth;}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">KHADMA AGRI <span>خدمة فلاحية</span></a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a href="jobs.html">فرص العمل</a>
+      <a href="#how">كيف تعمل المنصة</a>
+      <a href="#companies">للشركات</a>
+      <a href="worker-dashboard.html">لوحة العامل</a>
+      <a href="company-dashboard.html">لوحة الشركة</a>
+    </nav>
+    <a class="btn btn-outline-light btn-sm" href="worker-register.html">إنشاء حساب</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="rays" aria-hidden="true">
+      <i class="ray r1"></i><i class="ray r2"></i><i class="ray r3"></i><i class="ray r4"></i><i class="ray r5"></i>
+    </div>
+    <div class="container hero-inner">
+      <h1 class="hero-title" data-blur-text>لقّي خدمتك الفلاحية بسهولة</h1>
+      <p class="hero-lead">منصة تنظم العمل الفلاحي الموسمي من نشر العرض إلى اختيار العمال وتنظيم الحضور والنقل، انطلاقاً من إقليم اشتوكة آيت باها.</p>
+      <div class="hero-actions">
+        <a class="star-border" href="jobs.html"><span class="star-border__inner">البحث عن عمل</span></a>
+        <a class="btn btn-outline-light" href="company-register.html">تسجيل شركة أو ضيعة</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how" data-reveal>
+    <div class="container">
+      <h2 class="section-title">كيف تعمل المنصة</h2>
+      <ol class="steps">
+        <li><h3>الشركة تنشر العرض</h3><p>تحدد النشاط والأجر والمدة والنقل وعدد العمال المطلوبين.</p></li>
+        <li><h3>العامل يترشح</h3><p>يتصفح العروض حسب المنطقة والنشاط ويرسل ترشحه.</p></li>
+        <li><h3>الشركة تنتقي العمال</h3><p>تراجع الطلبات وتقبل العدد المطلوب.</p></li>
+        <li><h3>تنظيم الوردية والنقل</h3><p>تحديد التوقيت ونقطة التجمع وتسجيل الحضور.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FEATURED JOBS -->
+  <section class="section section-alt" id="jobs" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">فرص عمل مختارة</h2>
+        <span class="badge badge-demo">بيانات توضيحية</span>
+      </div>
+      <div class="job-list">
+        <article class="job">
+          <div class="job-main">
+            <h3><a href="job-details.html">جني الطماطم</a></h3>
+            <p class="job-meta">ضيعة توضيحية – آيت عميرة، اشتوكة آيت باها</p>
+          </div>
+          <dl class="job-facts">
+            <div><dt>الأجر</dt><dd>90 درهم / اليوم</dd></div>
+            <div><dt>المدة</dt><dd>شهران</dd></div>
+            <div><dt>العمال</dt><dd>25</dd></div>
+            <div><dt>النقل</dt><dd>متوفر</dd></div>
+          </dl>
+          <span class="badge badge-ok">مفتوح</span>
+        </article>
+        <article class="job">
+          <div class="job-main">
+            <h3><a href="job-details.html">التلفيف والتوضيب</a></h3>
+            <p class="job-meta">وحدة توضيحية – بيوكرى، اشتوكة آيت باها</p>
+          </div>
+          <dl class="job-facts">
+            <div><dt>الأجر</dt><dd>85 درهم / اليوم</dd></div>
+            <div><dt>المدة</dt><dd>3 أشهر</dd></div>
+            <div><dt>العمال</dt><dd>40</dd></div>
+            <div><dt>النقل</dt><dd>غير متوفر</dd></div>
+          </dl>
+          <span class="badge badge-ok">مفتوح</span>
+        </article>
+        <article class="job">
+          <div class="job-main">
+            <h3><a href="job-details.html">جني الفلفل</a></h3>
+            <p class="job-meta">ضيعة توضيحية – بلفاع، اشتوكة آيت باها</p>
+          </div>
+          <dl class="job-facts">
+            <div><dt>الأجر</dt><dd>95 درهم / اليوم</dd></div>
+            <div><dt>المدة</dt><dd>6 أسابيع</dd></div>
+            <div><dt>العمال</dt><dd>15</dd></div>
+            <div><dt>النقل</dt><dd>متوفر</dd></div>
+          </dl>
+          <span class="badge badge-warn">أماكن قليلة</span>
+        </article>
+      </div>
+      <a class="link-more" href="jobs.html">عرض كل الفرص</a>
+    </div>
+  </section>
+
+  <!-- COMPANIES -->
+  <section class="section" id="companies" data-reveal>
+    <div class="container split">
+      <div>
+        <h2 class="section-title">للشركات والضيعات الفلاحية</h2>
+        <p class="text">انشروا عروضكم، راجعوا الترشحات، نظموا الورديات ونقاط التجمع، وتابعوا حضور العمال من لوحة واحدة.</p>
+        <a class="btn btn-primary" href="company-register.html">تسجيل شركة أو ضيعة</a>
+      </div>
+      <div class="panel">
+        <span class="badge badge-demo">مؤشرات توضيحية من لوحة الشركة</span>
+        <ul class="kpis">
+          <li><strong data-count="3">3</strong><span>عروض نشطة</span></li>
+          <li><strong data-count="80">80</strong><span>عاملاً مطلوباً</span></li>
+          <li><strong data-count="126">126</strong><span>طلب ترشح</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section-alt" id="features" data-reveal>
+    <div class="container">
+      <h2 class="section-title">مميزات المنصة</h2>
+      <ul class="features">
+        <li><h3>عروض واضحة</h3><p>الأجر والمدة والنقل ظاهرة قبل فتح العرض.</p></li>
+        <li><h3>ترشح مباشر</h3><p>ملف واحد للعامل يُستعمل في كل الترشحات.</p></li>
+        <li><h3>تنظيم الورديات</h3><p>توقيت وعدد العمال ونقطة تجمع لكل وردية.</p></li>
+        <li><h3>النقل والحضور</h3><p>مقاعد النقل وقائمة الحضور في مكان واحد.</p></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><strong>KHADMA AGRI</strong><p>خدمة فلاحية – نموذج واجهة أولي، البيانات المعروضة توضيحية.</p></div>
+    <nav aria-label="روابط التذييل">
+      <a href="jobs.html">فرص العمل</a>
+      <a href="worker-register.html">تسجيل العامل</a>
+      <a href="company-register.html">تسجيل الشركة</a>
+      <a href="create-job.html">نشر عرض</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

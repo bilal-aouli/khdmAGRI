@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فرص العمل – KHADMA AGRI</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">KHADMA AGRI <span>خدمة فلاحية</span></a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a href="jobs.html">فرص العمل</a>
+      <a href="index.html#how">كيف تعمل المنصة</a>
+      <a href="index.html#companies">للشركات</a>
+      <a href="worker-dashboard.html">لوحة العامل</a>
+      <a href="company-dashboard.html">لوحة الشركة</a>
+    </nav>
+    <a class="btn btn-outline-light btn-sm" href="worker-register.html">إنشاء حساب</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1>فرص العمل الفلاحي</h1>
+      <p>ابحث عن عمل موسمي حسب المنطقة والنشاط ومدة العمل.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container jobs-layout">
+      <form class="filters" action="jobs.html" method="get" aria-label="البحث والتصفية">
+        <div class="field">
+          <label for="q">البحث عن فرصة عمل</label>
+          <input id="q" name="q" type="search" placeholder="مثال: جني الطماطم">
+        </div>
+        <div class="field">
+          <label for="region">المنطقة</label>
+          <select id="region" name="region">
+            <option value="">كل المناطق</option>
+            <option>آيت عميرة</option><option>بلفاع</option><option>سيدي بيبي</option><option>بيوكرى</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="activity">نوع النشاط</label>
+          <select id="activity" name="activity">
+            <option value="">كل الأنشطة</option>
+            <option>جني الطماطم</option><option>جني الفلفل</option><option>جني الفواكه والخضر</option><option>التلفيف والتوضيب</option><option>أعمال الصيانة الفلاحية</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="duration">مدة العمل</label>
+          <select id="duration" name="duration">
+            <option value="">أي مدة</option>
+            <option>أقل من شهر</option><option>من شهر إلى 3 أشهر</option><option>أكثر من 3 أشهر</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="transport">توفر النقل</label>
+          <select id="transport" name="transport">
+            <option value="">الكل</option>
+            <option>النقل متوفر</option><option>النقل غير متوفر</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">بحث</button>
+        <p class="note">واجهة توضيحية: التصفية غير مفعلة في هذه المرحلة.</p>
+      </form>
+
+      <div>
+        <div class="section-head list-head">
+          <h2 class="list-title">العروض المتاحة</h2>
+          <span class="badge badge-demo">بيانات توضيحية</span>
+        </div>
+        <div class="job-list">
+          <article class="job">
+            <div class="job-main">
+              <h3><a href="job-details.html">جني الطماطم</a></h3>
+              <p class="job-meta">ضيعة توضيحية – آيت عميرة، اشتوكة آيت باها</p>
+              <p class="job-meta">بداية العمل: 01/12/2026</p>
+            </div>
+            <dl class="job-facts">
+              <div><dt>الأجر</dt><dd>90 درهم / اليوم</dd></div>
+              <div><dt>المدة</dt><dd>شهران</dd></div>
+              <div><dt>العمال المطلوبون</dt><dd>25</dd></div>
+              <div><dt>النقل</dt><dd>متوفر</dd></div>
+            </dl>
+            <span class="badge badge-ok">مفتوح</span>
+          </article>
+          <article class="job">
+            <div class="job-main">
+              <h3><a href="job-details.html">التلفيف والتوضيب</a></h3>
+              <p class="job-meta">وحدة توضيحية – بيوكرى، اشتوكة آيت باها</p>
+              <p class="job-meta">بداية العمل: 05/12/2026</p>
+            </div>
+            <dl class="job-facts">
+              <div><dt>الأجر</dt><dd>85 درهم / اليوم</dd></div>
+              <div><dt>المدة</dt><dd>3 أشهر</dd></div>
+              <div><dt>العمال المطلوبون</dt><dd>40</dd></div>
+              <div><dt>النقل</dt><dd>غير متوفر</dd></div>
+            </dl>
+            <span class="badge badge-ok">مفتوح</span>
+          </article>
+          <article class="job">
+            <div class="job-main">
+              <h3><a href="job-details.html">جني الفلفل</a></h3>
+              <p class="job-meta">ضيعة توضيحية – بلفاع، اشتوكة آيت باها</p>
+              <p class="job-meta">بداية العمل: 28/11/2026</p>
+            </div>
+            <dl class="job-facts">
+              <div><dt>الأجر</dt><dd>95 درهم / اليوم</dd></div>
+              <div><dt>المدة</dt><dd>6 أسابيع</dd></div>
+              <div><dt>العمال المطلوبون</dt><dd>15</dd></div>
+              <div><dt>النقل</dt><dd>متوفر</dd></div>
+            </dl>
+            <span class="badge badge-warn">أماكن قليلة</span>
+          </article>
+          <article class="job">
+            <div class="job-main">
+              <h3><a href="job-details.html">جني الفواكه والخضر</a></h3>
+              <p class="job-meta">ضيعة توضيحية – سيدي بيبي، اشتوكة آيت باها</p>
+              <p class="job-meta">بداية العمل: 15/11/2026</p>
+            </div>
+            <dl class="job-facts">
+              <div><dt>الأجر</dt><dd>88 درهم / اليوم</dd></div>
+              <div><dt>المدة</dt><dd>أسبوعان</dd></div>
+              <div><dt>العمال المطلوبون</dt><dd>10</dd></div>
+              <div><dt>النقل</dt><dd>متوفر</dd></div>
+            </dl>
+            <span class="badge badge-bad">مغلق</span>
+          </article>
+          <article class="job">
+            <div class="job-main">
+              <h3><a href="job-details.html">أعمال الصيانة الفلاحية</a></h3>
+              <p class="job-meta">ضيعة توضيحية – آيت عميرة، اشتوكة آيت باها</p>
+              <p class="job-meta">بداية العمل: 10/12/2026</p>
+            </div>
+            <dl class="job-facts">
+              <div><dt>الأجر</dt><dd>2800 درهم / الشهر</dd></div>
+              <div><dt>المدة</dt><dd>4 أشهر</dd></div>
+              <div><dt>العمال المطلوبون</dt><dd>6</dd></div>
+              <div><dt>النقل</dt><dd>غير متوفر</dd></div>
+            </dl>
+            <span class="badge badge-ok">مفتوح</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><strong>KHADMA AGRI</strong><p>خدمة فلاحية – نموذج واجهة أولي، البيانات المعروضة توضيحية.</p></div>
+    <nav aria-label="روابط التذييل">
+      <a href="jobs.html">فرص العمل</a>
+      <a href="worker-register.html">تسجيل العامل</a>
+      <a href="company-register.html">تسجيل الشركة</a>
+      <a href="create-job.html">نشر عرض</a>
+    </nav>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
